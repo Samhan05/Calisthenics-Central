@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="pullup.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Calisthenics Central</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(white, rgb(253, 194, 0), white, black);
+            color: white;
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .navbar img {
+            width: 35px;
+            margin-left: 25px;
+        }
+
+        nav ul {
+            display: inline;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(253, 194, 0);
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            background-color: rgba(252, 172, 0, 0.7);
+            border-bottom: 2px solid rgb(253, 194, 0);
+        }
+
+        .gallery-container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .gallery-container h2 {
+            color: rgb(253, 194, 0);
+            margin-bottom: 20px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .slides img {
+            width: 100%;
+            border: 3px solid rgb(253, 194, 0);
+            border-radius: 10px;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: rgb(253, 194, 0);
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgb(253, 194, 0);
+            color: black;
+        }
+
+        .dots-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: rgba(253, 194, 0, 0.5);
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: rgb(253, 194, 0);
+        }
+        .size{
+            size: 200px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .navbar img {
+            width: 35px;
+            margin-left: 25px;
+        }
+        .login {
+            border: solid;
+            color: black;
+            padding: 5px;
+            background: linear-gradient(to right, rgb(253, 194, 0), white);
+            border-radius: 8px 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="Home.html"><img src="imgs/logo4.png" alt="logo" class="logo"></a>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="AboutUS.html">About Us</a></li>
+            <li><a href="sell.html">Services/Products</a></li>
+            <li><a href="portfolio.html">Protolio/Gasllary</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+            <li><a href="login.html" class="login">Let's Start</a></li>
+        </ul>
+    </nav>
+
+    <div class="gallery-container">
+        <h2>Our Portfolio</h2>
+        <div class="slideshow-container">
+            <div class="slides">
+                <img style="width: auto;"     src="imgs/handstand.webp" alt="Yellow Masculine Guy 1">
+            </div>
+
+            <div class="slides">
+                <img style="width: auto;"   src="imgs/pullup.webp" alt="Yellow Masculine Guy 2">
+            </div>
+
+            <div class="slides">
+                <img style="width: auto;" src="imgs/stand.webp" alt="Yellow Masculine Guy 3">
+            </div>
+            <div class="slides">
+                <img style="width: auto;" src="imgs/DALL·E 2024-12-31 01.39.46 - A highly stylized yellow masculine figure performing advanced calisthenics moves in a professional gym setting. The figure is shown holding a front le.webp" alt="Yellow Masculine Guy 3">
+            </div>
+
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Calisthenics Central. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>

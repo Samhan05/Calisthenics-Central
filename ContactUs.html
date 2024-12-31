@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="pullup.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Calisthenics Central</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(white, rgb(253, 194, 0), white, black);
+            color: white;
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .navbar img {
+            width: 35px;
+            margin-left: 25px;
+        }
+
+        h1, h2, h3, h4 {
+            color: rgb(253, 194, 0);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav ul {
+            display: inline;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(253, 194, 0);
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            background-color: rgba(252, 172, 0, 0.7);
+            border-bottom: 2px solid rgb(253, 194, 0);
+        }
+
+        .content {
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 5px solid rgb(253, 194, 0);
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 1.1rem;
+            color: rgb(253, 194, 0);
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            border: 1px solid rgb(253, 194, 0);
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: white;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: rgb(253, 194, 0);
+            color: black;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 4px 8px 4px 8px;
+            margin-top: 30px;
+            text-align: center;
+            border: 2px solid rgb(253, 194, 0);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: black;
+            color: rgb(253, 194, 0);
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+
+        .team-info {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgb(253, 194, 0);
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        .team-info p {
+            margin: 5px 0;
+        }
+
+        .team-info a {
+            color: rgb(253, 194, 0);
+            text-decoration: none;
+        }
+
+        .team-info a:hover {
+            text-decoration: underline;
+        }
+        .login {
+            border: solid;
+            color: black;
+            padding: 5px;
+            background: linear-gradient(to right, rgb(253, 194, 0), white);
+            border-radius: 8px 4px;
+        }
+
+        .login:hover {
+            border-color: black;
+            background: linear-gradient(black, rgb(253, 194, 0));
+            color: #fff;
+            border-radius: 4px 8px;}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="Home.html"><img src="imgs/logo4.png" alt="logo"></a>
+        <ul>
+            <li><a href="home.html"><i class='bx bx-home'></i> Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services/Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+            <li><a href="login.html" class="login">Let's Start</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h2>Contact Us - Calisthenics Central</h2>
+            <p>We value your feedback! Reach out to us with any questions, concerns, or suggestions you may have.</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+            <div class="team-info">
+                <h3>Team Members</h3>
+                <p>Sultan Samhan - <a href="mailto:202310885@std-zuj.edu.jo">202310885@std-zuj.edu.jo</a></p>
+                <p>Omar Qaddorah - <a href="mailto:202313052@std-zuj.edu.jo">202313052@std-zuj.edu.jo</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Calisthenics Central. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
+
+

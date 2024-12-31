@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="pullup.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Calisthenics Central</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(white, rgb(253, 194, 0), white, black);
+            color: white;
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .navbar img {
+            width: 35px;
+            margin-left: 25px;
+        }
+
+        nav ul {
+            display: inline;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(253, 194, 0);
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            background-color: rgba(252, 172, 0, 0.7);
+            border-bottom: 2px solid rgb(253, 194, 0);
+        }
+
+        .about-container {
+            text-align: center;
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .about-container h2 {
+            color: rgb(253, 194, 0);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-container p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: white;
+        }
+
+        .team {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .team-member {
+            margin: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid rgb(253, 194, 0);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid rgb(253, 194, 0);
+        }
+
+        .team-member h3 {
+            color: rgb(253, 194, 0);
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .team-member p {
+            font-size: 1rem;
+            color: white;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="Home.html"><img src="imgs/logo4.png" alt="logo" class="logo"></a>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="AboutUS.html">About Us</a></li>
+            <li><a href="sell.html">Services/Products</a></li>
+            <li><a href="portfolio.html">Protolio/Gasllary</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+            <li><a href="login.html" class="login">Let's Start</a></li>
+        </ul>
+    </nav>
+
+    <div class="about-container">
+        <h2>About Us</h2>
+        <p>Welcome to Calisthenics Central, your ultimate destination for mastering bodyweight fitness. Our mission is to inspire and guide individuals towards achieving their fitness goals through the art of calisthenics. With a passionate team and a commitment to excellence, we aim to create a community that empowers and supports each other in the journey of physical transformation.</p>
+
+        <div class="team">
+            <div class="team-member">
+                <img src="imgs/member1.jpg" alt="Team Member 1">
+                <h3>Sultan Samhan</h3>
+                <p>Founder & Head Trainer</p>
+            </div>
+
+            <div class="team-member">
+                <img src="imgs/member2.jpg" alt="Team Member 2">
+                <h3>Omar Qaddorah</h3>
+                <p>Community Manager</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Calisthenics Central. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
