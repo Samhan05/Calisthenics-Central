@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="pullup.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calisthenics Central: Your Ultimate Fitness Hub</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(white, rgb(253, 194, 0), white, black);
+            color: white;
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar img {
+            width: 35px;
+            margin-left: 25px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: rgb(253, 194, 0);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+        }
+
+        .left {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .right {
+            flex: 3;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            color: black; /* Change text color to black */
+        }
+
+        .section {
+            cursor: pointer;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .section:hover {
+            background: rgb(253, 194, 0);
+        }
+
+        .section-content {
+            display: none;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .active .section-content {
+            display: block;
+        }
+
+        nav {
+            background-color: black;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .login {
+            border: solid;
+            color: black;
+            padding: 5px;
+            background: linear-gradient(to right, rgb(253, 194, 0), white);
+            border-radius: 8px 4px;
+        }
+
+        .login:hover {
+            border-color: black;
+            background: linear-gradient(black, rgb(253, 194, 0));
+            color: #fff;
+            border-radius: 4px 8px;
+        }
+
+        nav ul {
+            display: inline;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .home {
+            color: rgb(253, 194, 0);
+        }
+
+        .home:hover {
+            color: white;
+            background: rgb(253, 194, 0);
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(253, 194, 0);
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            border: 2px;
+            border-style: none;
+            background-color: rgba(252, 172, 0, 0.7);
+            border-bottom-style: solid;
+            border-bottom-color: rgb(253, 194, 0);
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+
+        .blog-title {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="Home.html"><img src="imgs/logo4.png" alt="logo" class="logo"></a>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="AboutUS.html">About Us</a></li>
+            <li><a href="sell.html">Services/Products</a></li>
+            <li><a href="portfolio.html">Protolio/Gasllary</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+            <li><a href="login.html" class="login">Let's Start</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="left">
+            <h2 class="blog-title" style="color: black;">Blog</h2>
+            <div class="section" onclick="showContent('workout')">Workout Routines</div>
+            <div class="section" onclick="showContent('nutrition')">Nutrition and Diet</div>
+            <div class="section" onclick="showContent('success')">Success Stories</div>
+            <div class="section" onclick="showContent('tips')">Tips and Tricks</div>
+            <div class="section" onclick="showContent('community')">Community Highlights</div>
+            <div class="section" onclick="showContent('news')">News and Updates</div>
+            <div class="section" onclick="showContent('guest')">Guest Posts</div>
+            <div class="section" onclick="showContent('equipment')">Equipment Reviews</div>
+            <div class="section" onclick="showContent('mindset')">Mindset and Motivation</div>
+            <div class="section" onclick="showContent('research')">Research and Trends</div>
+        </div>
+
+        <div class="right" id="content">
+            <h2 style="color: black;">Welcome</h2>
+            <p>Click on the sections on the left to see more details.</p>
+        </div>
+    </div>
+
+    <script>
+        function showContent(section) {
+            const content = {
+                'workout': 'Calisthenics workout routines are designed to build strength, endurance, and flexibility using bodyweight exercises. Popular routines include full-body workouts, upper/lower splits, and targeted muscle group exercises. Beginners can start with basic exercises like push-ups, squats, and planks, while more advanced practitioners can progress to challenging moves like muscle-ups and handstands.',
+                'nutrition': 'Proper nutrition is crucial for optimal performance in calisthenics. A balanced diet rich in protein, complex carbohydrates, and healthy fats supports muscle growth and recovery. Hydration is also key, as staying well-hydrated helps maintain energy levels and prevent injuries. Meal timing and portion control can further enhance your training results.',
+                'success': 'Many individuals have achieved remarkable transformations through calisthenics. Success stories often highlight significant improvements in strength, body composition, and overall fitness. These stories serve as inspiration and motivation for others to embark on their own fitness journeys.',
+                'tips': 'To get started with calisthenics, it\'s important to focus on building a solid foundation of strength and proper form. Beginners should prioritize warming up, maintaining proper technique, and gradually increasing the difficulty of exercises. Consistency and patience are key, as progress may take time.',
+                'community': 'The calisthenics community is a vibrant and supportive network of individuals who share a passion for bodyweight training. Community members often share workout tips, success stories, and motivational content on social media platforms like YouTube and TikTok. Engaging with the community can provide valuable support and encouragement.',
+                'news': 'Stay updated with the latest trends and developments in the world of calisthenics. This includes new workout routines, nutrition advice, and success stories from top athletes. Following fitness blogs, social media accounts, and subscribing to relevant newsletters can help you stay informed.',
+                'guest': 'Guest posts from experienced calisthenics practitioners can provide unique insights and tips for improving your training. These posts often cover topics like workout programming, nutrition strategies, and personal success stories. Reading guest posts can offer fresh perspectives and inspiration.',
+                'equipment': 'While calisthenics primarily relies on bodyweight exercises, certain equipment like pull-up bars, resistance bands, and parallettes can enhance your training. Reviews of this equipment can help you make informed decisions about which tools to incorporate into your routine.',
+                'mindset': 'Maintaining a positive mindset and staying motivated are essential for long-term success in calisthenics. Setting realistic goals, tracking progress, and celebrating achievements can help keep you focused and motivated. Surrounding yourself with supportive.',
+                'research':'Research in calisthenics explores the effectiveness of bodyweight training for various fitness goals. Trends in the field include the integration of calisthenics into fitness programs, the development of new exercises, and the use of technology to enhance training11. Staying informed about these trends can help you optimize your workouts and achieve better results.'
+            };
+            document.getElementById('content').innerHTML = `<h2 style="color: black;">${section.charAt(0).toUpperCase() + section.slice(1)}</h2><p>${content[section]}</p>`;
+        }
+    </script>
+</body>
+
+</html>
