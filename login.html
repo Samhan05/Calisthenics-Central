@@ -24,15 +24,15 @@
             <h1 id="h1">Login</h1>
             <div class="SingInBox">
 
-                <input type="username" placeholder="username" required maxlength="9" minlength="5"> <i
+                <input type="username" placeholder="username" id="username" required maxlength="9" minlength="5"> <i
                     class='bx bxs-user'></i>
             </div>
-            <div class="SingInBox"><input type="password" placeholder="Password" required maxlength="16"
+            <div class="SingInBox"><input type="password" placeholder="Password" id="f-Pass" required maxlength="16"
                     min-height="4"><i class='bx bxs-lock'></i>
             </div>
             <div class="reme"><input type="checkbox"> &nbsp;<p>remmeber me?</p>
             </div>
-            <center><button class="btn" onclick="location.href='Home.html'; return false;">Sign In</button></center>
+            <center><button class="btn" id="btn1" onclick="location.href='Home.html'; return false;">Sign In</button></center>
 
             <div class="ForgetPass-register">
                 <a href="#">forget your password?</a>
@@ -52,16 +52,16 @@
                 <input type="username" placeholder="username" required maxlength="9" minlength="5"> <i
                     class='bx bxs-user'></i>
             </div>
-            <div class="SingInBox"><input type="password" placeholder="Password" required maxlength="16"
-                    min-height="4"><i class='bx bx-lock-open-alt'></i>
+            <div class="SingInBox"><input type="password" id="Pass" placeholder="Password" maxlength="16"
+                    min-height="4"  required><i class='bx bx-lock-open-alt'></i>
             </div>
-            <div class="SingInBox"><input type="password" placeholder="repeat Password" required maxlength="16"
-                min-height="4"><i class='bx bxs-lock'></i>
+            <div class="SingInBox"><input type="password" id="repeatPass" placeholder="repeat Password"  maxlength="16"
+                min-height="4" required><i class='bx bxs-lock'></i>
         </div>
         <div class="ForgetPass-register">
             <p class="singup" id="singin">already have an acoount?SingIn</p>
            </div>
-            <center>  <button class="btn"  onclick="location.href='Home.html'; return false;">Sing Up</button></center>
+            <center>  <button class="btn"  id="btn2"  >Sing Up</button></center>
            
            
 
@@ -79,7 +79,39 @@
             document.getElementById("content").style.display="inline-block";
             document.getElementById("content2").style.display="none";
         }
-    </script>
+        alert("Passwords do not match. Please try again.");
+        
+        document.getElementById("btn2").onclick = function (event) {
+    let password = document.getElementById("Pass").value;
+    let repeatPass = document.getElementById("repeatPass").value;
+
+    if (password !== repeatPass) {
+        event.preventDefault(); 
+        alert("Passwords do not match. Please try again.");
+    } else {
+        alert("Sign up successful!");
+      
+        location.href = 'Home.html';
+    }
+};
+document.getElementById("btn1").onclick=function(event){
+    let username = document.getElementById("username").value;
+    let fPass=document.getElementById("f-Pass").value;
+    if (username!=("os2005")|| fPass!=('2005')) {
+        event.preventDefault();
+        alert("Invalid username or password");
+        
+    }
+    if (username==("os2005")&& fPass==('2005')) {
+        alert("Sing in successful!")
+        location.href = 'Home.html';
+        
+    }
+     
+    
+};
+    
+        </script>
 </body>
 
 </html>
